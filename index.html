@@ -84,9 +84,6 @@
     }
 
     .player-status {
-  position: relative;
-  bottom: auto;
-  margin-top: 12px;
       position: absolute;
       bottom: 25px;
       left: 50%;
@@ -129,9 +126,6 @@
         background-image: url('./assets/bg-mobile.jpeg');
       }
       .player-status {
-  position: relative;
-  bottom: auto;
-  margin-top: 12px;
         bottom: 15px;
         font-size: 1em;
       }
@@ -141,7 +135,15 @@
       .label.anthony { text-align: right; padding-right: 12px; }
       .label.eason, .label.leo, .label.jacky { text-align: left; padding-left: 12px; }
     }
-  </style>
+  
+@media (max-width: 768px) {
+  html, body {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+</style>
 </head>
 <body>
   <div class="container">
@@ -206,7 +208,7 @@
     window.addEventListener('resize', updateOverlayForMobile);
 
     
-    // 當畫面切換或離開頁籤時，自動暫停音樂
+    // 畫面切換時自動暫停播放
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) {
         player.pause();
