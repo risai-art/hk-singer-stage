@@ -4,11 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>香港男歌手互動演唱頁面</title>
+  <title>香港男歌手演唱會現場</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { height: 100%; font-family: sans-serif; background-color: black; }
     .container {
+  aspect-ratio: 9 / 16;
+  height: auto;
+  max-height: 100vh;
+
       width: 100%;
       height: 100vh;
       background-image: url('./assets/bg-desktop.jpeg');
@@ -19,6 +23,8 @@
       overflow: hidden;
     }
     .area {
+  flex: none;
+  height: 25%;
       flex: 1;
       height: 100%;
       position: relative;
@@ -112,6 +118,10 @@
 
     @media (max-width: 768px) {
       .container {
+  aspect-ratio: 9 / 16;
+  height: auto;
+  max-height: 100vh;
+
         flex-direction: column;
         background-image: url('./assets/bg-mobile.jpeg');
       }
